@@ -73,6 +73,10 @@ body {
   font-family: arial;
 }
 
+.conteiner a {
+  text-decoration: none;
+}
+
 .original {
   min-height: 100%;
   overflow: hidden;
@@ -82,6 +86,7 @@ body {
 
 .content {
   flex: 1 1 auto;
+  margin-top: 1%;
 }
 
 .conteiner {
@@ -92,8 +97,9 @@ body {
 .hi__top {
   height: 8vh;
   display: flex;
-  background-color: orange;
+  background-color: aliceblue;
   justify-content: space-between;
+  border-radius: 0px 0px 45px 0px;
 }
 
 .hi__logo img {
@@ -101,20 +107,24 @@ body {
 }
 
 .hi__logo {
+  min-width: 45%;
   display: flex;
-  max-width: 40%;
-  box-shadow: 0 0px 20px black;
+  box-shadow: 0 0px 10px black;
+  border-radius: 0px 0px 50px 0px;
 }
 
 .hi__foto {
   height: 100%;
+  display: grid;
+  display: flex;
 }
 
 .hi__text {
-  background-color: #b3bc20;
-  padding: 2% 0 0 2%;
-  font-size: 1.3vw;
+  background-color: white;
+  font-size: 100%;
   overflow: hidden;
+  padding-left: 2%;
+  border-radius: 0px 0px 50px 0px;
 }
 
 .hi__langeage {
@@ -140,41 +150,47 @@ body {
 }
 
 .hi__soc {
-  min-width: 30%;
-  background: #f08c78;
+  max-width: 20%;
   display: inline-flex;
   justify-content: space-around;
 }
 
 .soc {
   height: 50%;
-  width: 11%;
   border-radius: 50%;
   margin: auto 0;
-  background: #99cc99;
+}
+
+.soc img {
+  height: 100%;
 }
 
 .footer .footer__row {
   padding: 0.5%;
-  background: #99cc99;
+  background: mediumpurple;
   text-align: center;
+  font-family: monospace;
 }
 
 .geo__row {
-  margin-top: 30%;
-  background-color: red;
-  height: 15vh;
+  background-color: cornsilk;
   padding: 2vh 2vw;
 }
 
 .geo__center {
   height: 100%;
   box-shadow: 0px 0.5px white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.geo__title {
+  text-align: center;
+  padding: 5% 0;
 }
 
 .menu__rov {
-  height: 7vh;
-  background: #99cc99;
+  height: 6vh;
   padding: 1vh 0vw;
 }
 
@@ -188,15 +204,93 @@ body {
 }
 
 .menu__column {
-  width: 14%;
+  width: inherit;
   height: 100%;
   font-size: 1.2vw;
   text-align: center;
-  background: #b3bc20;
+  background: lavender;
   box-shadow: 0 0 10px black;
   color: white;
   transition-duration: 1s;
   cursor: pointer;
+}
+
+.geo__column li {
+  background: gainsboro;
+  height: 3vh;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 2px 0px black;
+}
+
+.geo__column li:hover {
+  background: azure;
+  box-shadow: 0 2px 0px black;
+}
+
+.geo__column img {
+  height: 100%;
+  padding-right: 10%;
+  margin-left: 5%;
+}
+
+.geo__column {
+  width: 50%;
+  text-align: center;
+  background: azure;
+  padding-bottom: 2vh;
+  border-radius: 20px;
+  padding-right: 2%;
+  box-shadow: 0 0 10px cadetblue;
+}
+
+.geo__column._Kont li {
+  text-align: inherit;
+  display: flex;
+}
+
+.geo__punkt {
+  text-align: center;
+}
+
+.geo__tocolumn {
+  display: flex;
+  width: 50%;
+}
+
+.menu__list {
+  position: absolute;
+  left: 0%;
+  top: 10vh;
+  width: 100%;
+  z-index: -10;
+  transition: all 1s ease 0s;
+  height: 0%;
+}
+
+.menu__list li {
+  padding: 7.5% 0;
+  background: white;
+  color: black;
+  transition: all 0.5s ease 0s;
+}
+
+.menu__facult {
+  box-shadow: 0px 2px black;
+}
+
+.menu__list li:hover {
+  background: gold;
+  box-shadow: 0 0 10px white;
+}
+
+.menu__element._el {
+  transition: all 0.5s ease 0s;
+}
+
+.menu__element._el:hover .menu__list {
+  z-index: 1;
+  height: 100%;
+  top: 100%;
 }
 
 .menu__column:hover {
@@ -206,28 +300,42 @@ body {
 }
 
 .menu__element {
-  background: #f08c78;
+  background: azure;
   height: 3vh;
   padding: 1vh 0;
+  position: relative;
+  color: black;
 }
 
 .preBody__row {
   background-image: url(../../Img/preBody.jpg);
   background-size: cover;
-  height: 80vh;
+  height: 70vh;
   padding: 20%;
+  margin-top: -1%;
 }
 
+@media (max-width: 767px) {
+  .preBody__row {
+    height: auto;
+    margin-top: 2%;
+  }
+}
 .preBody__text {
   color: white;
   font-size: 3vw;
   text-align: center;
   text-shadow: 2px 0 black;
+  transition: all 0.5s ease 0s;
+}
+
+.preBody__text:hover {
+  color: gold;
 }
 
 .body__title {
-  margin-top: 2%;
-  background: #5dbede;
+  margin-top: 0%;
+  background: mediumpurple;
   padding: 1vh 0;
   font-size: 3vw;
   text-align: center;
@@ -242,13 +350,25 @@ body {
   display: inline-flex;
 }
 
+@media (max-width: 767px) {
+  .body__conteiner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .body__image {
   width: 60%;
   padding: 0.5%;
-  background: #fce17e;
+  background: dimgrey;
   height: 100%;
 }
 
+@media (max-width: 767px) {
+  .body__image {
+    width: 100%;
+  }
+}
 .body__image img {
   width: 100%;
   height: 100%;
@@ -256,23 +376,28 @@ body {
 
 .body__box {
   width: 40%;
-  background: #99cc99;
+  background: lavender;
   height: 100%;
 }
 
+@media (max-width: 767px) {
+  .body__box {
+    width: 100%;
+  }
+}
 .body__body__title {
-  background: red;
+  background: dimgrey;
   padding: 2%;
   text-align: center;
-  font-size: 2.05vw;
+  font-size: 150%;
   color: white;
   text-shadow: 2px 0 black;
 }
 
 .body__body__special {
-  background: #99cc99;
+  background: lavender;
   padding: 1.2vh 2vw;
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .body__body__special li {
@@ -293,4 +418,197 @@ body {
 
 .body__row:last child {
   margin-bottom: 20%;
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .hi__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 10;
+    margin: auto;
+    top: 30%;
+  }
+
+  .hi__burger:before, .hi__burger:after {
+    content: "";
+    background: black;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all 0.5s ease 0s;
+  }
+
+  .hi__burger span {
+    background: black;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 9px;
+    transition: all 0.5s ease 0s;
+  }
+
+  .hi__burger.active span {
+    transform: scale(0);
+  }
+
+  .hi__burger:before {
+    top: 0;
+  }
+
+  .hi__burger.active:before {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+
+  .hi__burger:after {
+    bottom: 0px;
+  }
+
+  .hi__burger.active:after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+
+  .hi__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .hi__top {
+    position: fixed;
+    height: 10vh;
+  }
+
+  .hi__burger__wra {
+    width: 20%;
+    align-items: center;
+    justify-content: inherit;
+    height: 100%;
+  }
+
+  .menu__rov {
+    height: 7vh;
+    background: none;
+    width: 100%;
+  }
+
+  .hi__logo {
+    min-width: 100vw;
+    position: relative;
+    padding: 2%;
+  }
+
+  .hi__langeage {
+    display: none;
+  }
+
+  .menu__select {
+    width: 0%;
+    position: relative;
+    top: 6.6vh;
+    top: -100%;
+  }
+
+  .menu__menu {
+    background: #f08c78;
+    width: 100%;
+    height: 13vh;
+    justify-content: space-between;
+    position: fixed;
+    display: block;
+    top: -100%;
+    transition: all 0.7s ease 0s;
+    overflow: auto;
+  }
+
+  .menu__element {
+    height: 7vh;
+  }
+
+  .menu__menu.active {
+    top: 15%;
+    height: -webkit-fill-available;
+    transition: all 0.7s ease 0s;
+  }
+
+  .menu__column {
+    width: 100%;
+    height: 9vh;
+    font-size: 3vw;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+    color: white;
+    transition-duration: 1s;
+    cursor: pointer;
+  }
+
+  .hi__soc {
+    position: fixed;
+    top: -1000px;
+    transition: all 0.7s ease 0s;
+    min-width: 100vw;
+    background: #f08c78;
+    display: inline-flex;
+    justify-content: space-around;
+    height: 6vh;
+    z-index: -10;
+  }
+
+  .hi__soc.active {
+    min-width: 100vw;
+    background: aliceblue;
+    display: inline-flex;
+    justify-content: space-around;
+    height: 6vh;
+    position: absolute;
+    top: 100%;
+  }
+
+  .hi__text {
+    width: 100%;
+    padding-left: 5%;
+    margin: 0 3%;
+  }
+
+  .menu__list {
+    display: none;
+    transition: all 0.7s ease 0s;
+  }
+
+  .menu__element._el:hover .menu__list {
+    z-index: 1;
+    height: 100%;
+    top: 100%;
+  }
+
+  .menu__list.active {
+    display: block;
+    z-index: 1;
+    height: 100%;
+    top: 100%;
+  }
+
+  .geo__tocolumn {
+    display: flex;
+    width: 100%;
+  }
+
+  .geo__center {
+    display: block;
+  }
+
+  .geo__column {
+    width: 50%;
+  }
 }
